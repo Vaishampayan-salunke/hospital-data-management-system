@@ -1,0 +1,486 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Segoe UI', sans-serif;
+
+    background: #f4f6f9;
+
+    overflow-x: hidden;
+}
+
+.d-flex {
+
+    display: flex;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+
+    width: 250px;
+
+    min-height: 100vh;
+
+    background: #031540;
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    padding-top: 25px;
+}
+
+.logo {
+
+    color: white;
+
+    font-size: 34px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+
+    padding-left: 22px;
+
+    margin-bottom: 40px;
+}
+
+.sidebar ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+.sidebar ul li {
+
+    margin-bottom: 8px;
+}
+
+.sidebar ul li a {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: white;
+
+    padding: 16px 22px;
+
+    margin: 0 12px;
+
+    border-radius: 14px;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+
+    background: rgba(255,255,255,0.12);
+}
+
+.sidebar ul li.active a {
+
+    background: rgba(255,255,255,0.15);
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+
+    padding: 35px;
+}
+
+
+/* =========================================
+   PAGE TITLES
+========================================= */
+
+.page-title,
+.main-content h1 {
+
+    font-size: 58px;
+
+    font-weight: 700;
+
+    margin-bottom: 35px;
+
+    color: #1a1a1a;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.card {
+
+    border: none;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+
+/* =========================================
+   DASHBOARD CARDS
+========================================= */
+
+.dashboard-cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 25px;
+
+    margin-bottom: 40px;
+}
+
+.dashboard-card {
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    min-height: 220px;
+
+    color: white;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+
+    transform: translateY(-5px);
+}
+
+.dashboard-card h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 25px;
+
+    font-weight: 600;
+}
+
+.dashboard-card h1 {
+
+    font-size: 72px;
+
+    font-weight: bold;
+}
+
+.blue-card {
+
+    background: #0d6efd;
+}
+
+.green-card {
+
+    background: #198754;
+}
+
+.yellow-card {
+
+    background: #ffc107;
+
+    color: black;
+}
+
+.red-card {
+
+    background: #dc3545;
+}
+
+
+/* =========================================
+   INFO CARD
+========================================= */
+
+.info-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.info-card h2 {
+
+    margin-bottom: 20px;
+
+    font-size: 26px;
+}
+
+.info-card p {
+
+    line-height: 1.8;
+
+    font-size: 18px;
+
+    color: #333;
+}
+
+
+/* =========================================
+   ANALYTICS CARDS
+========================================= */
+
+.analytics-card {
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    min-height: 190px;
+}
+
+.analytics-card h5 {
+
+    font-size: 22px;
+}
+
+.analytics-card h2 {
+
+    font-size: 60px;
+
+    font-weight: bold;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   TABLES
+========================================= */
+
+table {
+
+    width: 100%;
+}
+
+table th {
+
+    background: #111827 !important;
+
+    color: white !important;
+
+    padding: 14px;
+}
+
+table td {
+
+    padding: 14px;
+
+    vertical-align: middle;
+}
+
+
+/* =========================================
+   FORM INPUTS
+========================================= */
+
+.form-control {
+
+    height: 55px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+
+    border-radius: 10px;
+
+    padding: 12px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+.login-body {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #001845,
+        #2563eb
+    );
+}
+
+.login-container {
+
+    width: 100%;
+
+    max-width: 460px;
+
+    padding: 20px;
+}
+
+.login-card {
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.login-title {
+
+    font-size: 52px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    color: #001845;
+
+    margin-bottom: 10px;
+}
+
+.login-subtitle {
+
+    text-align: center;
+
+    color: gray;
+
+    margin-bottom: 35px;
+}
+
+.login-btn {
+
+    height: 50px;
+
+    font-size: 18px;
+}
+
+.login-footer {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    color: gray;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width: 992px) {
+
+    .sidebar {
+
+        width: 220px;
+    }
+
+    .main-content {
+
+        margin-left: 220px;
+
+        width: calc(100% - 220px);
+    }
+
+    .page-title,
+    .main-content h1 {
+
+        font-size: 42px;
+    }
+
+    .dashboard-card h1 {
+
+        font-size: 52px;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .sidebar {
+
+        width: 200px;
+    }
+
+    .main-content {
+
+        margin-left: 200px;
+
+        width: calc(100% - 200px);
+
+        padding: 20px;
+    }
+
+    .sidebar ul li a {
+
+        font-size: 16px;
+    }
+
+    .logo {
+
+        font-size: 28px;
+    }
+}
